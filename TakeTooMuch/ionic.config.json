@@ -1,7 +1,0 @@
-{
-  "name": "TakeTooMuch",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
