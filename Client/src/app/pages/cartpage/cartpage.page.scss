@@ -51,25 +51,40 @@
     
   // }
 
-  ion-item {
-    // padding: 1rem;
-    
+
+.ion-padding {
+  text-align: center;
+}
+
+item-options {
+  height: 80px;
+}
+
+item-option {
+  height: 80px;
+}
+
+ion-label{
+  height: 80px;
+}
+
+ion-item-sliding {
+border: 2px;
+border-color: black;
+}
+
+.Delt {
+  color: azure;
+}
+
+.JumboTron {
+  height: 200px;
+}
+
+  .BtnPlacemnt {
+    align-items: center;
+    margin-left: 28%;
+    margin-top: 20%;
   }
 
-  ion-label {
-    // padding: 1rem;
-  }
-
-  ion-item-sliding {
-
-  }
-
-  ion-item-options {
-    
-  }
-
-
-
-  // .ion-padding {
-  //   margin-bottom: 60px;
-  // }
+ 
