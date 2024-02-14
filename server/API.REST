@@ -7,22 +7,29 @@
 
 GET {{SERVER}}
 
-###Register a new user
+###Register a new user ####3
 
 POST {{SERVER}}/api/user/register
 content-type: application/json
 
 {
-    "email": "kwazi3@gmail.com",
-    "name": "kwazi", 
-    "password": "123567",
-    "role": "admin"
+    "email": "dudu77@gmail.com",
+    "name": "Adi", 
+    "password": "12356789",
+    "role": "client" 
 }
 
+####LOGIN #####
 
-####LOGIN 
+POST {{SERVER}}/api/user/login 
+content-type: application/json
 
-
+{
+    "name": "Adi",
+    "email": "dudu77@gmail.com",
+    "password": "12356789",
+    "role": "client"
+}
 
 
 
