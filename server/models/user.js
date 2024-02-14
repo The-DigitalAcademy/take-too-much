@@ -8,17 +8,16 @@ const userSchema = new mongoose.Schema(
       unique: true,
     },
     name:{
-      type: String, 
-      required: true, 
-      unique: true, 
+      type: String,  
+     
     }, 
     password:{ 
     type: String, 
     required: true, 
-    unique: true,
     }, 
-    isAdmin: {
-        type: Boolean,
+    role:{
+        type: String,
+        required: true,
       },
     },
     { timestamps: true }
