@@ -4,20 +4,30 @@ const jwt = require('jsonwebtoken');
 
 
 exports.register = async (req, res) => {
-    try {
+  
+
+        // requisting a user to enter the required information 
+
     const { name, email, role, password } = req.body;
     
+     //  condition to check if the password is less than 6 
+
     if (password.length < 6) {
         return res.status(400).json({ message: "Password less than 6 characters" });
     }
+    // condition to check if a password or email was entered. 
+
     if (!email || !password) {
         return res.status(400).json({
             message: "email or Password not present",
         })
     }
+
+      // condition to see if the entered email already exists in the DB. 
+
     const user = await User.findOne({ email: req.body.email });
 
-   
+    try {
         if (user) {
             res.status(400).json({
                 message: "User already exists",
@@ -36,6 +46,8 @@ exports.register = async (req, res) => {
             );
         };
     }
+
+    // error handling message // 
     catch (error) {
         res.status(400).json({
             message: "An error occurred",
@@ -44,12 +56,7 @@ exports.register = async (req, res) => {
     }
 }
 
-
-
-
-
-
-
+//login 
 
 exports.login = async (req, res) => {
 
@@ -64,16 +71,11 @@ exports.login = async (req, res) => {
             message: "email or Password not present",
         })
     }
-
+          // to check to exist if the specific email exists 
     try {
         const exists = await User.findOne({ email: req.body.email })
 
-        // if(user.email){
-
-        //   return res.status(400).json({
-        //     message: "email or Password not present",
-
-        // },
+       
 
         // compare the hashed password with the one that the user has inserted// 
 
@@ -85,7 +87,7 @@ exports.login = async (req, res) => {
             password: passwordMatch
         })
 
-        await user.save()
+        // await user.save()
 
         if (!passwordMatch) {
             res.status(401).json({
