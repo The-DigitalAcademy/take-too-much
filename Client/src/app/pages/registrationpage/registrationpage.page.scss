@@ -44,11 +44,11 @@ h1 {
 
 .login-container {
     position: relative;
-    width: 22.2rem;
+    width: 28rem;
 }
 .form-container {
-    border: 1px solid hsla(0, 0%, 65%, 0.158);
-    box-shadow: 0 0 36px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid hsla(117, 80%, 10%, 0.422);
+    box-shadow: 0 0 36px 1px rgba(14, 38, 24, 0.2);
     border-radius: 10px;
     backdrop-filter: blur(20px);
     z-index: 99;
@@ -81,8 +81,8 @@ h1 {
 
 .login-container form input:focus {
     box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
-    animation: wobble 0.3s ease-in;
-    -webkit-animation: wobble 0.3s ease-in;
+    animation: wobble 1s ease-in;
+    -webkit-animation: wobble 1s ease-in;
 }
 
 .login-container form button {
@@ -112,6 +112,8 @@ h1 {
 
 .login-container form button:hover {
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+    border: 1px;
+    border-color: #3f774b9b;
     transform: scale(1.02);
     -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
@@ -119,17 +121,7 @@ h1 {
     -o-transform: scale(1.02);
 }
 
-.circle {
-    width: 8rem;
-    height: 8rem;
-    background: var(--primary-color);
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    position: absolute;
-}
+
 
 .illustration {
     position: absolute;
@@ -138,35 +130,17 @@ h1 {
     width: 90%;
 }
 
-.circle-one {
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transform: translate(-45%, -45%);
-    -webkit-transform: translate(-45%, -45%);
-    -moz-transform: translate(-45%, -45%);
-    -ms-transform: translate(-45%, -45%);
-    -o-transform: translate(-45%, -45%);
-}
-
-.circle-two {
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    transform: translate(45%, 45%);
-    -webkit-transform: translate(45%, 45%);
-    -moz-transform: translate(45%, 45%);
-    -ms-transform: translate(45%, 45%);
-    -o-transform: translate(45%, 45%);
-}
-
 .register-forget {
     margin: 1rem 0;
     display: flex;
     justify-content: space-between;
 }
+
 .opacity {
     opacity: 0.6;
+    border: 5px;
+    border-color: rgba(62, 102, 62, 0.468);
+    margin-top: 10%;
 }
 
 .theme-btn-container {
@@ -213,6 +187,24 @@ h1 {
         -ms-transform: scale(1);
         -o-transform: scale(1);
     }
+}
+
+.selectG {
+    border: 0px;
+    width: 40%;
+    height: 45px;
+    vertical-align: middle;
+    // -webkit-appearance: none;
+    // appearance: none;
+    // padding-left: 5px;
+    margin-top: 2%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(80, 80, 80, 0.19);
+    border-radius: 7px;
+    padding: 12px;
+}
+
+label {
+margin-left: 2%;
 }
 
 
