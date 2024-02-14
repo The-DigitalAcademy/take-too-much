@@ -1,8 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Wish List</ion-title>
+    <ion-title><ion-icon name="heart" size="large"></ion-icon></ion-title>
     <ion-buttons [collapse]="true" slot="end">
-      <ion-button>Cart</ion-button>
+      <ion-button class="nav-link"
+      routerLink="/cartpage"
+      routerLinkActive="activeRoute"><ion-icon name="cart"size="large"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-buttons [collapse]="true" slot="end">
+      <ion-button class="nav-link"
+      routerLink=""
+      routerLinkActive="activeRoute"><ion-icon name="glasses" size="large"></ion-icon></ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -13,8 +20,14 @@
       <ion-buttons [collapse]="true" slot="end">
         <ion-button class="nav-link"
         routerLink="/cartpage"
-        routerLinkActive="activeRoute">Cart</ion-button>
+        routerLinkActive="activeRoute"><ion-icon name="cart"></ion-icon></ion-button>
       </ion-buttons>
+      <ion-buttons [collapse]="true" slot="end">
+        <ion-button class="nav-link"
+        routerLink=""
+        routerLinkActive="activeRoute"><ion-icon name="glasses"></ion-icon></ion-button>
+      </ion-buttons>
+      
     </ion-toolbar>
   </ion-header>
 
