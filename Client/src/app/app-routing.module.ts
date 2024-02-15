@@ -23,10 +23,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/orderspage/orderspage.module').then( m => m.OrderspagePageModule)
   },
   {
-    path: 'wishlistpage',
-    loadChildren: () => import('./pages/wishlistpage/wishlistpage.module').then( m => m.WishlistpagePageModule)
-  },
-  {
     path: 'addressbookpage',
     loadChildren: () => import('./pages/addressbookpage/addressbookpage.module').then( m => m.AddressbookpagePageModule)
   },
@@ -41,7 +37,12 @@ const routes: Routes = [
   {
     path: 'cartpage',
     loadChildren: () => import('./pages/cartpage/cartpage.module').then( m => m.CartpagePageModule)
+  },
+  {
+    path: 'loginpage',
+    loadChildren: () => import('./pages/loginpage/loginpage.module').then( m => m.LoginpagePageModule)
   }
+
 ];
 @NgModule({
   imports: [
