@@ -40,7 +40,7 @@ POST {{SERVER}}/api/product/create
 content-type: application/json
 
 {
-     "name": "Playstation 5", 
+     "name": "", 
      "description": "White 2 Controller and a console", 
      "title": "Sony", 
      "price": "6000", 

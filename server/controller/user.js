@@ -84,7 +84,8 @@ exports.login = async (req, res) => {
         const user = new User({
 
             email,
-            password: passwordMatch
+            password: passwordMatch,
+            role: exists.role
         })
 
         // await user.save()
@@ -104,10 +105,11 @@ exports.login = async (req, res) => {
                     name: user.name,
                     email: user.email,
                     password: user.password,
+                    role: user.role
                 },
                 process.env.JWT_SECRET,
                 { expiresIn: '6h' }
-            )
+            );
 
             res.status(200).json({
                 message: "Login successful",
