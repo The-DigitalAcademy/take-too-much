@@ -1,6 +1,6 @@
 ##Variables that will be used on the site##
 
-@SERVER = http://localhost:7000
+@SERVER = http://localhost:8000
 
 
 ###RUNNING The server ###
@@ -15,7 +15,8 @@ content-type: application/json
 {
     "name": "lebo",
     "email": "lebo@gmail.com", 
-    "password": "1234567"
+    "password": "1234567",
+    "isAdmin": "false"
 }
 
 

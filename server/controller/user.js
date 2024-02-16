@@ -4,20 +4,21 @@ const jwt = require('jsonwebtoken');
 
 
 exports.register = async (req, res, next) => {
-    const { name, password, email } = req.body
+    const { name, password, email, isAdmin } = req.body
     if (password.length< 6) {
       return res.status(400).json({ message: "Password less than 6 characters" })
     };
 
     await User.create({
-        name,
-        password,
-        email,
-      }).then(User =>
-        res.status(200).json({
-          message: "User successfully created",
-          User,
-        })
-      )
+      name,
+      password,
+      email,
+      isAdmin,
+    }).then((User) =>
+      res.status(200).json({
+        message: "User successfully created",
+        User,
+      })
+    );
     };
 
