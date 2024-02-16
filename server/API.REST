@@ -1,23 +1,66 @@
 ##Variables that will be used on the site##
 
-@SERVER = http://localhost:8000
+
+@SERVER = http://localhost:9000
+
 
 
 ###RUNNING The server ###
 
 GET {{SERVER}}
 
-###Register
+###Register a new user ####3
 
 POST {{SERVER}}/api/user/register
 content-type: application/json
 
 {
-    "name": "lebo",
-    "email": "lebo@gmail.com", 
-    "password": "1234567",
-    "isAdmin": "false"
+
+    "email": "kwazi777@gmail.com",
+    "name": "Adi", 
+    "password": "12356789",
+    "role": "client" 
+
 }
+
+
+
+####LOGIN #####
+
+POST {{SERVER}}/api/user/login 
+content-type: application/json
+
+{
+    "email": "kwazi777@gmail.com",
+    "password": "12356789"
+}
+
+
+
+####Create a product
+
+POST {{SERVER}}/api/product/create
+content-type: application/json
+
+{
+     "name": "", 
+     "description": "White 2 Controller and a console", 
+     "title": "Sony", 
+     "price": "6000", 
+     "discountPercentage":"20", 
+     "rating": "4", 
+     "stock": "15", 
+     "brand": "Sony", 
+     "category":"Laptop",
+     "thumbnail":"https://m.media-amazon.com/images/I/51051FiD9UL.jpg", 
+     "images": ["https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2023%2F08%2FPlayStation-5-Drops-Its-Price-for-the-First-Time-1.jpg?cbr=1&q=90", "https://cdn.vox-cdn.com/thumbor/iuN_gRGwP7262NabqJjdZFyNitg=/0x0:2040x1360/2000x1333/filters:focal(1020x680:1021x681)/cdn.vox-cdn.com/uploads/chorus_asset/file/25072864/110923_new_Playstation_5_Slim_ADiBenedetto_0001.jpg"]
+}
+
+
+####Get all the products that have been added. 
+
+GET {{SERVER}}/api/product/all
+
 
 
 
