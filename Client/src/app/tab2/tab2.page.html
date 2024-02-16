@@ -1,17 +1,98 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-title><ion-icon name="albums" size="large"></ion-icon></ion-title>
+    <ion-buttons [collapse]="true" slot="end">
+      <ion-button class="nav-link"
+      routerLink="/cartpage"
+      routerLinkActive="activeRoute"><ion-icon name="cart" size="large"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-buttons [collapse]="true" slot="end">
+      <ion-button class="nav-link"
+      routerLink=""
+      routerLinkActive="activeRoute"><ion-icon name="glasses" size="large"></ion-icon></ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Categories</ion-title>
+      <ion-buttons [collapse]="true" slot="end">
+        <ion-button class="nav-link"
+        routerLink="/cartpage"
+        routerLinkActive="activeRoute"><ion-icon name="cart"></ion-icon></ion-button>
+      </ion-buttons> 
+      <ion-buttons [collapse]="true" slot="end">
+        <ion-button class="nav-link"
+        routerLink=""
+        routerLinkActive="activeRoute"><ion-icon name="glasses"></ion-icon></ion-button>
+      </ion-buttons> 
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <div class="ion-padding">Select a Category.</div>
+
+
+  <div class="row">
+
+
+    <div class="col">
+      <div class="card">
+      <ion-card>
+       
+  
+      </ion-card>
+      </div>
+  </div>
+  
+  <div class="col">
+    <div class="card">
+    <ion-card>
+     
+  
+    </ion-card>
+    </div>
+  </div>
+  
+  <div class="col">
+    <div class="card">
+    <ion-card>
+     
+  
+    </ion-card>
+    </div>
+  </div>
+  
+  <div class="col">
+  <div class="card">
+  <ion-card>
+   
+  
+  </ion-card>
+  </div>
+  </div>
+  
+    <div class="col">
+      <div class="card">
+      <ion-card>
+       
+  
+      </ion-card>
+      </div>
+  </div>
+  
+  <div class="col">
+    <div class="card">
+    <ion-card>
+     
+  
+    </ion-card>
+    </div>
+  </div>
+  
+  
+  </div>
+
+
+  
 </ion-content>
