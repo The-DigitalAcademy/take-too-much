@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 exports.register = async (req, res) => {
   // requisting a user to enter the required information
 
+
   const { name, email, role, password } = req.body;
 
   //  condition to check if the password is less than 6

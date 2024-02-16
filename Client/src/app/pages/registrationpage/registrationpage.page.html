@@ -7,14 +7,44 @@
         <h1 class="opacity">Register</h1>
 
 
-        <form class="dropIt">
-          <input type="text" placeholder="full name" />
-          <input type="password" placeholder="email" />
-          <input type="text" placeholder="password" />
+       
+        <form class="dropIt" [formGroup]="form" autocomplete="off" >
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="name"
+              id="Name"
+              placeholder="Email"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="email"
+              id="Email"
+              placeholder="Email"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="password"
+              id="Password"
+              placeholder="Email"
+            />
+          </div>
+          
+          
             <label for="">Admin?</label>
           <div>
           
-            <select name="isAdmin" class="selectG">
+            <select  name="isAdmin" class="selectG">
               <option value="default">Default setting</option>
               <option value="yes">yes</option>
               <option value="no">no</option>

@@ -1,6 +1,8 @@
 ##Variables that will be used on the site##
 
+
 @SERVER = http://localhost:9000
+
 
 
 ###RUNNING The server ###
@@ -13,10 +15,12 @@ POST {{SERVER}}/api/user/register
 content-type: application/json
 
 {
+
     "email": "kwazi777@gmail.com",
     "name": "Adi", 
     "password": "12356789",
     "role": "client" 
+
 }
 
 
