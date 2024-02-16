@@ -12,3 +12,16 @@ exports.create = async (req, res) => {
       res.status(400).json({ error: error.message });
     }
   }
+
+
+
+  exports.read = async (req, res) => {
+    try {
+      const product = await Item.find();
+       res.json(product);
+    } catch (error) {
+       res.json({ message: "Something went wrong, try again later" });
+     }
+
+
+  }
