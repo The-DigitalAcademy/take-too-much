@@ -1,6 +1,6 @@
 ##Variables that will be used on the site##
 
-@SERVER = http://localhost:7000
+@SERVER = http://localhost:9000
 
 
 ###RUNNING The server ###
@@ -13,11 +13,13 @@ POST {{SERVER}}/api/user/register
 content-type: application/json
 
 {
-    "email": "dudu77@gmail.com",
+    "email": "kwazi777@gmail.com",
     "name": "Adi", 
     "password": "12356789",
     "role": "client" 
 }
+
+
 
 ####LOGIN #####
 
@@ -25,16 +27,13 @@ POST {{SERVER}}/api/user/login
 content-type: application/json
 
 {
-
-    "email": "dudu77@gmail.com",
+    "email": "kwazi777@gmail.com",
     "password": "12356789"
-  
 }
 
 
 
 ####Create a product
-
 
 POST {{SERVER}}/api/product/create
 content-type: application/json
@@ -54,6 +53,9 @@ content-type: application/json
 }
 
 
+####Get all the products that have been added. 
+
+GET {{SERVER}}/api/product/all
 
 
 
